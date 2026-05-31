@@ -1,0 +1,105 @@
+step 1>> Go to the project folder
+cd C:\Users\rawat\Downloads\JOB-PORTAL-USING-DJANGO-PYTHON-main\JOB-PORTAL-USING-DJANGO-PYTHON-main
+
+step 2>> Create a virtual environment
+py -3.10 -m venv venv
+
+ step 3 Activate the virtual environment
+venv\Scripts\activate
+
+ step 4 >Install project dependencies
+ pip install -r requirements.txt
+
+ step 4 >> Run database migrations
+ python manage.py migrate
+
+ step 5 >> Create admin user (optional but recommended)
+ python manage.py createsuperuser
+
+ step 6 >> Run the server
+python manage.py runserver
+
+step 7 >> Open the website
+http://127.0.0.1:8000
+
+
+📁 Project Structure 
+
+Main folders:
+
+accounts → user registration/login
+
+jobs → job posting
+
+jobsapp → project settings
+
+templates → HTML pages
+
+static → CSS & JS
+
+db.sqlite3 → database
+
+
+<<<<<<<<   FLOW OF THE PROJECT    >>>>
+User → Browser
+        ↓
+     URL request
+        ↓
+     urls.py
+        ↓
+     views.py
+        ↓
+     models.py
+        ↓
+     database
+        ↓
+     template (HTML)
+        ↓
+     response to browser
+
+
+# >>>  STRUCTURE OF THE PROJECT FOLDER FILES 
+JOB-PORTAL-USING-DJANGO-PYTHON-main
+│
+└── JOB-PORTAL-USING-DJANGO-PYTHON-main
+    │
+    ├── accounts
+    │   ├── migrations
+    │   ├── __init__.py
+    │   ├── admin.py
+    │   ├── apps.py
+    │   ├── forms.py
+    │   ├── models.py
+    │   ├── tests.py
+    │   ├── urls.py
+    │   └── views.py
+    │
+    ├── jobs
+    │   ├── migrations
+    │   ├── __init__.py
+    │   ├── admin.py
+    │   ├── apps.py
+    │   ├── models.py
+    │   ├── tests.py
+    │   ├── urls.py
+    │   └── views.py
+    │
+    ├── jobsapp
+    │   ├── __init__.py
+    │   ├── settings.py
+    │   ├── urls.py
+    │   └── wsgi.py
+    │
+    ├── static
+    │
+    ├── templates
+    │
+    ├── screenshots
+    │
+    ├── db.sqlite3
+    ├── manage.py
+    ├── requirements.txt
+    ├── Procfile
+    ├── Procfile.windows
+    ├── README.md
+    └── LICENSE
